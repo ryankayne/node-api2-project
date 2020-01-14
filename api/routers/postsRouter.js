@@ -102,6 +102,7 @@ router.delete('/:id', (req, res) => {
 
 router.put('/api/posts/:id', (req, res) => {
   const changes = req.body;
+  
   Database.update(req.params.id, changes)
   .then(post => {
     if (post) {
